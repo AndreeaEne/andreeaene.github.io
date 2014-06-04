@@ -1,347 +1,181 @@
-+/*!
- + * Bootstrap v3.1.1 (http://getbootstrap.com)
- + * Copyright 2011-2014 Twitter, Inc.
- + * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- + */
- +
- +.btn-default,
- +.btn-primary,
- +.btn-success,
- +.btn-info,
- +.btn-warning,
- +.btn-danger {
- +  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
- +  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
- +          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
- +}
- +.btn-default:active,
- +.btn-primary:active,
- +.btn-success:active,
- +.btn-info:active,
- +.btn-warning:active,
- +.btn-danger:active,
- +.btn-default.active,
- +.btn-primary.active,
- +.btn-success.active,
- +.btn-info.active,
- +.btn-warning.active,
- +.btn-danger.active {
- +  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
- +          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
- +}
- +.btn:active,
- +.btn.active {
- +  background-image: none;
- +}
- +.btn-default {
- +  text-shadow: 0 1px 0 #fff;
- +  background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
- +  background-image:         linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #dbdbdb;
- +  border-color: #ccc;
- +}
- +.btn-default:hover,
- +.btn-default:focus {
- +  background-color: #e0e0e0;
- +  background-position: 0 -15px;
- +}
- +.btn-default:active,
- +.btn-default.active {
- +  background-color: #e0e0e0;
- +  border-color: #dbdbdb;
- +}
- +.btn-primary {
- +  background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
- +  background-image:         linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #2b669a;
- +}
- +.btn-primary:hover,
- +.btn-primary:focus {
- +  background-color: #2d6ca2;
- +  background-position: 0 -15px;
- +}
- +.btn-primary:active,
- +.btn-primary.active {
- +  background-color: #2d6ca2;
- +  border-color: #2b669a;
- +}
- +.btn-success {
- +  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
- +  background-image:         linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #3e8f3e;
- +}
- +.btn-success:hover,
- +.btn-success:focus {
- +  background-color: #419641;
- +  background-position: 0 -15px;
- +}
- +.btn-success:active,
- +.btn-success.active {
- +  background-color: #419641;
- +  border-color: #3e8f3e;
- +}
- +.btn-info {
- +  background-image: -webkit-linear-gradient(top, #5bc0de 0%, #2aabd2 100%);
- +  background-image:         linear-gradient(to bottom, #5bc0de 0%, #2aabd2 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #28a4c9;
- +}
- +.btn-info:hover,
- +.btn-info:focus {
- +  background-color: #2aabd2;
- +  background-position: 0 -15px;
- +}
- +.btn-info:active,
- +.btn-info.active {
- +  background-color: #2aabd2;
- +  border-color: #28a4c9;
- +}
- +.btn-warning {
- +  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
- +  background-image:         linear-gradient(to bottom, #f0ad4e 0%, #eb9316 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #e38d13;
- +}
- +.btn-warning:hover,
- +.btn-warning:focus {
- +  background-color: #eb9316;
- +  background-position: 0 -15px;
- +}
- +.btn-warning:active,
- +.btn-warning.active {
- +  background-color: #eb9316;
- +  border-color: #e38d13;
- +}
- +.btn-danger {
- +  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
- +  background-image:         linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-color: #b92c28;
- +}
- +.btn-danger:hover,
- +.btn-danger:focus {
- +  background-color: #c12e2a;
- +  background-position: 0 -15px;
- +}
- +.btn-danger:active,
- +.btn-danger.active {
- +  background-color: #c12e2a;
- +  border-color: #b92c28;
- +}
- +.thumbnail,
- +.img-thumbnail {
- +  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
- +          box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
- +}
- +.dropdown-menu > li > a:hover,
- +.dropdown-menu > li > a:focus {
- +  background-color: #e8e8e8;
- +  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
- +  background-image:         linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.dropdown-menu > .active > a,
- +.dropdown-menu > .active > a:hover,
- +.dropdown-menu > .active > a:focus {
- +  background-color: #357ebd;
- +  background-image: -webkit-linear-gradient(top, #428bca 0%, #357ebd 100%);
- +  background-image:         linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.navbar-default {
- +  background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
- +  background-image:         linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +  border-radius: 4px;
- +  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
- +          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
- +}
- +.navbar-default .navbar-nav > .active > a {
- +  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
- +  background-image:         linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff3f3f3', GradientType=0);
- +  background-repeat: repeat-x;
- +  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
- +          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
- +}
- +.navbar-brand,
- +.navbar-nav > li > a {
- +  text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
- +}
- +.navbar-inverse {
- +  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
- +  background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
- +  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
- +  background-repeat: repeat-x;
- +}
- +.navbar-inverse .navbar-nav > .active > a {
- +  background-image: -webkit-linear-gradient(top, #222 0%, #282828 100%);
- +  background-image:         linear-gradient(to bottom, #222 0%, #282828 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff282828', GradientType=0);
- +  background-repeat: repeat-x;
- +  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
- +          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
- +}
- +.navbar-inverse .navbar-brand,
- +.navbar-inverse .navbar-nav > li > a {
- +  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
- +}
- +.navbar-static-top,
- +.navbar-fixed-top,
- +.navbar-fixed-bottom {
- +  border-radius: 0;
- +}
- +.alert {
- +  text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
- +  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 2px rgba(0, 0, 0, .05);
- +          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 2px rgba(0, 0, 0, .05);
- +}
- +.alert-success {
- +  background-image: -webkit-linear-gradient(top, #dff0d8 0%, #c8e5bc 100%);
- +  background-image:         linear-gradient(to bottom, #dff0d8 0%, #c8e5bc 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #b2dba1;
- +}
- +.alert-info {
- +  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
- +  background-image:         linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #9acfea;
- +}
- +.alert-warning {
- +  background-image: -webkit-linear-gradient(top, #fcf8e3 0%, #f8efc0 100%);
- +  background-image:         linear-gradient(to bottom, #fcf8e3 0%, #f8efc0 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fff8efc0', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #f5e79e;
- +}
- +.alert-danger {
- +  background-image: -webkit-linear-gradient(top, #f2dede 0%, #e7c3c3 100%);
- +  background-image:         linear-gradient(to bottom, #f2dede 0%, #e7c3c3 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffe7c3c3', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #dca7a7;
- +}
- +.progress {
- +  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);
- +  background-image:         linear-gradient(to bottom, #ebebeb 0%, #f5f5f5 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff5f5f5', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.progress-bar {
- +  background-image: -webkit-linear-gradient(top, #428bca 0%, #3071a9 100%);
- +  background-image:         linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3071a9', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.progress-bar-success {
- +  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
- +  background-image:         linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.progress-bar-info {
- +  background-image: -webkit-linear-gradient(top, #5bc0de 0%, #31b0d5 100%);
- +  background-image:         linear-gradient(to bottom, #5bc0de 0%, #31b0d5 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff31b0d5', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.progress-bar-warning {
- +  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
- +  background-image:         linear-gradient(to bottom, #f0ad4e 0%, #ec971f 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffec971f', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.progress-bar-danger {
- +  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c9302c 100%);
- +  background-image:         linear-gradient(to bottom, #d9534f 0%, #c9302c 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc9302c', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.list-group {
- +  border-radius: 4px;
- +  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
- +          box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
- +}
- +.list-group-item.active,
- +.list-group-item.active:hover,
- +.list-group-item.active:focus {
- +  text-shadow: 0 -1px 0 #3071a9;
- +  background-image: -webkit-linear-gradient(top, #428bca 0%, #3278b3 100%);
- +  background-image:         linear-gradient(to bottom, #428bca 0%, #3278b3 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3278b3', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #3278b3;
- +}
- +.panel {
- +  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
- +          box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
- +}
- +.panel-default > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
- +  background-image:         linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.panel-primary > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #428bca 0%, #357ebd 100%);
- +  background-image:         linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.panel-success > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
- +  background-image:         linear-gradient(to bottom, #dff0d8 0%, #d0e9c6 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffd0e9c6', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.panel-info > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #c4e3f3 100%);
- +  background-image:         linear-gradient(to bottom, #d9edf7 0%, #c4e3f3 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffc4e3f3', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.panel-warning > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #fcf8e3 0%, #faf2cc 100%);
- +  background-image:         linear-gradient(to bottom, #fcf8e3 0%, #faf2cc 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fffaf2cc', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.panel-danger > .panel-heading {
- +  background-image: -webkit-linear-gradient(top, #f2dede 0%, #ebcccc 100%);
- +  background-image:         linear-gradient(to bottom, #f2dede 0%, #ebcccc 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);
- +  background-repeat: repeat-x;
- +}
- +.well {
- +  background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
- +  background-image:         linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%);
- +  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
- +  background-repeat: repeat-x;
- +  border-color: #dcdcdc;
- +  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
- +          box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
- +}
- +/*# sourceMappingURL=bootstrap-theme.css.map */
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Andreea-Daniela Ene</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<script>
+$(function(){
+    $(".section").height($(window).height());
+});
+
+/**
+ * SmoothScroll
+ * This helper script created by DWUser.com.  Copyright 2012 DWUser.com.  
+ * Dual-licensed under the GPL and MIT licenses.  
+ * All individual scripts remain property of their copyrighters.
+ * Date: 10-Sep-2012
+ * Version: 1.0.1
+ */
+if (!window['jQuery']) alert('The jQuery library must be included before the smoothscroll.js file.  The plugin will not work propery.');
+
+/**
+ * jQuery.ScrollTo - Easy element scrolling using jQuery.
+ * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * @author Ariel Flesler
+ * @version 1.4.3.1
+ */
+;(function($){var h=$.scrollTo=function(a,b,c){$(window).scrollTo(a,b,c)};h.defaults={axis:'xy',duration:parseFloat($.fn.jquery)>=1.3?0:1,limit:true};h.window=function(a){return $(window)._scrollable()};$.fn._scrollable=function(){return this.map(function(){var a=this,isWin=!a.nodeName||$.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!isWin)return a;var b=(a.contentWindow||a).document||a.ownerDocument||a;return/webkit/i.test(navigator.userAgent)||b.compatMode=='BackCompat'?b.body:b.documentElement})};$.fn.scrollTo=function(e,f,g){if(typeof f=='object'){g=f;f=0}if(typeof g=='function')g={onAfter:g};if(e=='max')e=9e9;g=$.extend({},h.defaults,g);f=f||g.duration;g.queue=g.queue&&g.axis.length>1;if(g.queue)f/=2;g.offset=both(g.offset);g.over=both(g.over);return this._scrollable().each(function(){if(e==null)return;var d=this,$elem=$(d),targ=e,toff,attr={},win=$elem.is('html,body');switch(typeof targ){case'number':case'string':if(/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(targ)){targ=both(targ);break}targ=$(targ,this);if(!targ.length)return;case'object':if(targ.is||targ.style)toff=(targ=$(targ)).offset()}$.each(g.axis.split(''),function(i,a){var b=a=='x'?'Left':'Top',pos=b.toLowerCase(),key='scroll'+b,old=d[key],max=h.max(d,a);if(toff){attr[key]=toff[pos]+(win?0:old-$elem.offset()[pos]);if(g.margin){attr[key]-=parseInt(targ.css('margin'+b))||0;attr[key]-=parseInt(targ.css('border'+b+'Width'))||0}attr[key]+=g.offset[pos]||0;if(g.over[pos])attr[key]+=targ[a=='x'?'width':'height']()*g.over[pos]}else{var c=targ[pos];attr[key]=c.slice&&c.slice(-1)=='%'?parseFloat(c)/100*max:c}if(g.limit&&/^\d+$/.test(attr[key]))attr[key]=attr[key]<=0?0:Math.min(attr[key],max);if(!i&&g.queue){if(old!=attr[key])animate(g.onAfterFirst);delete attr[key]}});animate(g.onAfter);function animate(a){$elem.animate(attr,f,g.easing,a&&function(){a.call(this,e,g)})}}).end()};h.max=function(a,b){var c=b=='x'?'Width':'Height',scroll='scroll'+c;if(!$(a).is('html,body'))return a[scroll]-$(a)[c.toLowerCase()]();var d='client'+c,html=a.ownerDocument.documentElement,body=a.ownerDocument.body;return Math.max(html[scroll],body[scroll])-Math.min(html[d],body[d])};function both(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
+
+/**
+ * jQuery.LocalScroll
+ * Copyright (c) 2007-2010 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * Date: 05/31/2010
+ * @author Ariel Flesler
+ * @version 1.2.8b
+ **/
+;(function(b){function g(a,e,d){var h=e.hash.slice(1),f=document.getElementById(h)||document.getElementsByName(h)[0];if(f){a&&a.preventDefault();var c=b(d.target);if(!(d.lock&&c.is(":animated")||d.onBefore&&!1===d.onBefore(a,f,c))){d.stop&&c._scrollable().stop(!0);if(d.hash){var a=f.id==h?"id":"name",g=b("<a> </a>").attr(a,h).css({position:"absolute",top:b(window).scrollTop(),left:b(window).scrollLeft()});f[a]="";b("body").prepend(g);location=e.hash;g.remove();f[a]=h}c.scrollTo(f,d).trigger("notify.serialScroll",
+[f])}}}var i=location.href.replace(/#.*/,""),c=b.localScroll=function(a){b("body").localScroll(a)};c.defaults={duration:1E3,axis:"y",event:"click",stop:!0,target:window,reset:!0};c.hash=function(a){if(location.hash){a=b.extend({},c.defaults,a);a.hash=!1;if(a.reset){var e=a.duration;delete a.duration;b(a.target).scrollTo(0,a);a.duration=e}g(0,location,a)}};b.fn.localScroll=function(a){function e(){return!!this.href&&!!this.hash&&this.href.replace(this.hash,"")==i&&(!a.filter||b(this).is(a.filter))}
+a=b.extend({},c.defaults,a);return a.lazy?this.bind(a.event,function(d){var c=b([d.target,d.target.parentNode]).filter(e)[0];c&&g(d,c,a)}):this.find("a,area").filter(e).bind(a.event,function(b){g(b,this,a)}).end().end()}})(jQuery);
+
+// Initialize all .smoothScroll links
+jQuery(function($){ $.localScroll({filter:'.smoothScroll'}); });
+
+</script>
+<style>
+.h2
+{
+
+color:#FFFFFF;}
+
+a:hover{
+
+text-decoration:none;}
+#red.selection{
+
+}
+</style>
+
+</head>
+
+
+ 
+<body>
+
+<div style="background-color:#ff9900;" class="section" id="yellow">
+   
+	<div class="col-xs-12" align="center" style="padding:0px;">
+		<div style="position:fixed; background-image:url(img/head.png); background-repeat:repeat-x;z-index:100000;" class="col-xs-12">
+		<div style="position:absolute;" class="col-sm-4">
+		
+		<div class="col-xs-2">
+		<a href="#yellow" class="smoothScroll">
+		
+		<h5  class="h2"  style="font-family: 'Poiret One', cursive; font-size:16px;"><span class="glyphicon glyphicon-home"></span>
+		<br />
+		Home</h5>
+		
+		</a>
+		</div>
+		
+		<div class="col-xs-2">
+		<a href="#red" class="smoothScroll">
+		
+		<h5  class="h2"  style="font-family: 'Poiret One', cursive; font-size:16px;"><span class="glyphicon glyphicon-user"></span>
+		<br />
+		About</h5>
+		
+		</a>
+		</div>
+		
+		<div class="col-xs-2">
+		
+		<a href="#blue" class="smoothScroll">
+		<h5  class="h2"  style="font-family: 'Poiret One', cursive; font-size:16px;"><span class="glyphicon glyphicon-file"></span>
+		<br />
+		Work</h5>
+		</a>
+		
+		</div>
+		
+		<div class="col-xs-2">
+		
+		<a href="#grey" class="smoothScroll">
+		<h5  class="h2"  style="font-family: 'Poiret One', cursive; font-size:16px;"><span class="glyphicon glyphicon-pencil"></span>
+		<br />
+		Portfolio</h5>
+		</a>
+		</div>
+		
+		<div class="col-xs-2">
+		
+		<a href="#green" class="smoothScroll">
+		<h5  class="h2"  style="font-family: 'Poiret One', cursive; font-size:16px;"><span class="glyphicon glyphicon-envelope"></span>
+		<br />
+		Contact</h5>
+		</a>
+		</div>
+		
+		</div>
+		<h1 style="color:#ffffff; font-family: 'Denk One', sans-serif;">Andreea-Daniela Ene</h1>
+		
+		<div style="position:absolute;" class="col-xs-12">
+		<div align="center" >
+		<span style="font-family: 'Poiret One', cursive; color:#FFFFFF;background-color:transparent; padding-left:20px; padding-right:20px;"></span>
+		</div>
+		</div>
+		<hr />
+		</div>
+		<div class="container" style="padding-top:8%;">
+	
+		<div class="col-lg-3 col-sm-6">
+		<h1  class="h2"><span class="glyphicon glyphicon-user"></span></h1>
+		<h3 class="h2" style="font-family: 'Denk One', sans-serif;">About</h2>
+		<hr />
+		
+		</div>
+		<div class="col-lg-3 col-sm-6">
+		<h1 class="h2"><span class="glyphicon glyphicon-file"></span></h1>
+		<h3 class="h2" style="font-family: 'Denk One', sans-serif;">Work</h2>
+		<hr />
+		
+		</div>
+		<div class="col-lg-3 col-sm-6">
+		<h1  class="h2"><span class="glyphicon glyphicon-pencil"></span></h1>
+		<h3 class="h2" style="font-family: 'Denk One', sans-serif;">Portfolio</h2>
+		<hr style=" border-width:thin;" />
+		
+		</div>
+		<div class="col-lg-3 col-sm-6">
+		<h1 class="h2"><span class="glyphicon glyphicon-envelope"></span></h1>
+		<h3 class="h2" style="font-family: 'Denk One', sans-serif;">Contact</h2>
+		<hr />
+		
+		</div>
+		 </div>
+	</div>
+	<div align="right">
+	<img src="img/coarda2.png" class="img-responsive" style="position:relative;right:0;" />
+	
+	</div>
+</div>
+
+<div style="background-color:#d44032;" class="section" id="red"></div>
+<div style="background-color:#44A5AC;" class="section" id="blue"></div>
+<div style="background-color:#4c4c4c;" class="section" id="grey"></div>
+<div style="background-color:#8bc14b;" class="section" id="green"></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
